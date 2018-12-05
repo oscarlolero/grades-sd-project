@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>University schedules</title>
+    <% include partials/head %>
+</head>
+
+<body>
+    <% include partials/nav %>
+    <div class="principal">
+        <div class="table100 ver3 m-t-10 m-l-20 m-r-20">
+            <table data-vertable="ver3">
+                <thead>
+                    <tr class="row100 head">
+                        <th class="column100 column1">Materia</th>
+                        <th class="column100 column2">Maestro</th>
+                        <th class="column100 column3">Calificación 1</th>
+                        <th class="column100 column4">Calificación 2</th>
+                        <th class="column100 column5">Calificación 3</th>
+                        <th class="column100 column6">Promedio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% rows.forEach(function(data) { %>
+                    <tr class="row100">
+                        <td class="column100 column1">
+                            <%= data.Materia %>
+                        </td>
+                        <td class="column100 column2">
+                            <%= data.Maestro %>
+                        </td>
+                        <td class="column100 column3">
+                            <%= data.Calificacion1 %>
+                        </td>
+                        <td class="column100 column4">
+                            <%= data.Calificacion2 %>
+                        </td>
+                        <td class="column100 column5">
+                            <%= data.Calificacion3 %>
+                        </td>
+                        <td class="column100 column6">
+                            <%= data.Promedio %>
+                        </td>
+                    </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="vendor/xlsx/xlsx.full.min.js"></script>
+    <script src="vendor/filesaver/FileSaver.min.js"></script>
+    <script src="js/univ.js"></script>
+</body>
+
+</html>
